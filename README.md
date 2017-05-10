@@ -724,6 +724,7 @@ server/routes/index.js
 ...
 app.get('/api/todos/:todoId', todosController.retrieve);
 ...
+```
 If you make a GET request to /api/todos/1using Postman, you should see the todo with id 1, with it's todo-items included in an array as well.
 
 Retrieve a single todo
@@ -733,9 +734,9 @@ Retrieve a single todo
 Let's now add functionality to update a single todo:
 
 server/controllers/todos.js
-
-...
 ```
+...
+
 update(req, res) {
   return Todo
     .findById(req.params.todoId, {
@@ -811,13 +812,14 @@ app.delete('/api/todos/:todoId', todosController.destroy);
 ...
 ```
 If you try this out in Postman, you might be surprised that you don't get any data back. You can modify the delete code to return a 200 status code and a delete successful message as shown in the code snippet below:
-
+``
 ...
   return todo
     .destroy()
     .then(() => res.status(200).send({ message: 'Todo deleted successfully.' }))
     .catch(error => res.status(400).send(error));
 ...
+``
 Personally, I prefer returning 204 No Content.
 
 # Updating and Deleting Todo Items
