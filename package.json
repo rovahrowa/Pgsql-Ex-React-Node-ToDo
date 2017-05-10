@@ -1,0 +1,33 @@
+{
+  "name": "pqsql-exp-rect-node-todo",
+  "version": "1.0.0",
+  "description": "A node js TODO REST API app using Postgres as database, Express Node framewprk and Sequelizer as ORM",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon bin/www.js",
+    "prod": "node bin/www.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rovahrowa/Pgsql-Ex-React-Node-ToDo.git"
+  },
+  "author": "Danstan Otieno Onyango",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rovahrowa/Pgsql-Ex-React-Node-ToDo/issues"
+  },
+  "homepage": "https://github.com/rovahrowa/Pgsql-Ex-React-Node-ToDo#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "morgan": "^1.8.1",
+    "pg": "^6.1.5",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.30.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0",
+    "sequelize-cli": "^2.7.0"
+  }
+}
